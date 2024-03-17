@@ -13,3 +13,10 @@ body {
     align-items: center;
     height: 100%;
 }
+
+.container {
+    height: 80vh;
+    width: 80vw;
+    background-color: #00000046;
+    border-radius: 13px;
+}

@@ -5,46 +5,6 @@ const sleep = (ms) => {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// const replaceContent = async (url) => {
-//     try {
-//         const response = await fetch(url);
-//         const html = await response.text();
-//         document.body.innerHTML = html; // Replace entire body with new content
-
-//         // Once the new content is loaded, include and execute the JavaScript file
-//         const script = document.createElement('script');
-//         script.src = 'js/500.js'; // Path to your JavaScript file
-//         document.body.appendChild(script);
-//     } catch (error) {
-//         console.error('Failed to fetch new content:', error);
-//     }
-// }
-
-const replaceContent = async (url) => {
-    try {
-        const response = await fetch(url);
-        const html = await response.text();
-
-        // Replace the entire body with new content
-        document.body.innerHTML = html;
-
-        // Reload JavaScript files if needed
-        const scriptElements = document.querySelectorAll('script');
-        scriptElements.forEach(scriptElement => {
-            const src = scriptElement.getAttribute('src');
-            if (src) {
-                const script = document.createElement('script');
-                script.src = src;
-                document.body.appendChild(script);
-            } else {
-                eval(scriptElement.textContent);
-            }
-        });
-    } catch (error) {
-        console.error('Failed to fetch new content:', error);
-    }
-}
-
 const handleMouseDown = (event) => {
     const gender = event.target.parentElement.id;
 

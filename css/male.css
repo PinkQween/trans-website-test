@@ -1,0 +1,15 @@
+body {
+    background-image: url("../assets/trans-flag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    user-select: none;
+}
+
+.center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

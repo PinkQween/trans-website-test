@@ -3,13 +3,15 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 100vh;
+    user-select: none;
 }
 
 .center-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
 }
 
 .card {
@@ -18,6 +20,24 @@ body {
     width: 16rem;
     border-radius: 13px;
     margin: 10px;
+    cursor: pointer;
+    transition: box-shadow 400ms ease; /* Add transition for smooth effect */
+}
+
+.card#male:hover {
+    box-shadow: 0 0 20px 5px #00BFFF; /* Neon glow effect for male */
+}
+
+.card#female:hover {
+    box-shadow: 0 0 20px 5px #FF69B4; /* Neon glow effect for female */
+}
+
+.card#male:active {
+    box-shadow: none;
+}
+
+.card#female:active {
+    box-shadow: none;
 }
 
 .choose-gender-image {
@@ -27,7 +47,12 @@ body {
 
 .header {
     color: #ffffff;
+    /* font-size: 96px; */
     font-size: 96px;
+    background-color: #00000044;
+    width: 85vw;
+    border-radius: 13px;
+    padding: 20px;
 }
 
 .container {
@@ -35,10 +60,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-bottom: calc(50vh - 8rem - 20px);
+    width: 100vw;
 }
+
+ #fun {
+        position: fixed; /* Make it stay in one position */
+        bottom: 20px; /* Adjust its position from bottom */
+        right: 20px; /* Adjust its position from right */
+        padding: 10px; /* Add padding for better visibility */
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        color: white; /* Text color */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none; /* Remove underline */
+        opacity: 0.3;
+        transition: opacity 0.3s; /* Smooth transition for opacity */
+        cursor: default;
+    }
+
+    #fun:hover {
+        opacity: 0.1; /* Reduce opacity on hover */
+    }

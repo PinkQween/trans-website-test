@@ -1,0 +1,1 @@
+textFit(document.getElementById("text"))

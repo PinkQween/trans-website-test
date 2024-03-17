@@ -44,11 +44,17 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 70vw;
+    width: 85vw;
+    height: 15vh;
     background-color: #00000046;
     color: white;
     padding: 10px;
     text-align: center;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }
 
 /* Character image positioning */
